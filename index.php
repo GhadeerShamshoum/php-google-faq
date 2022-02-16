@@ -65,13 +65,53 @@ $questions = [
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
 </head>
 <body>
-    <?php foreach ($questions as $data => $element){
-    foreach ($element as $question){
-        echo $question;  
-    }
-}?>
-    
+    <!-- header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex flex-column fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+            <img src="google-logo.png" alt="" width="70" height="40" class="d-inline-block align-text-top">
+            <span>Privacy & Terms</span> 
+            </a>
+        </div>
+        <div class="container-fluid border-bottom border-secondary">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Overview</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Privacy Policy</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Terms of Service</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link">Technologies</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link text-primary font-weight-bold border-bottom border-primary border-5">FAQ</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- main -->
+    <div class="container">
+        <div class="row">
+        <?php foreach ($questions as $data => $element){
+        foreach ($element as $question){
+            echo $question;  
+        }
+        }?>
+        </div>
+    </div>
 </body>
 </html>
